@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Student Dashboard</h2>
+
+<div class="menu">
+    <h3>Snacks</h3>
+    <button onclick="addItem('Sun Chips', 30)">Sun Chips - 30</button>
+    <button onclick="addItem('QQ', 20)">QQ - 20</button>
+    <button onclick="addItem('Cappuccino', 20)">Cappuccino - 20</button>
+
+    <h3>Detergents</h3>
+    <button onclick="addItem('Largo', 40)">Largo - 40</button>
+    <button onclick="addItem('Toothpaste', 30)">Toothpaste - 30</button>
+</div>
+
+<h3>Your Cart</h3>
+<ul id="cart"></ul>
+<p>Total: <span id="total">0</span> Birr</p>
+
+<input type="text" id="code" placeholder="Verification Code (abc123)">
+<button onclick="checkout()">Checkout</button>
+
+<p id="msg"></p>
+
+<!-- EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("joPVA6vZJ4M0666Ij");
+    })();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
